@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="6.4.0"
+VERSION="6.5.2"
 
 while read -r LINE || [[ -n $LINE ]]; do
   printf "%s\n" "${LINE}"
@@ -9,6 +9,6 @@ while read -r LINE || [[ -n $LINE ]]; do
   git pull
   git checkout -b "upgrade-to-g-s-b-$VERSION"
   sed -i "" -E 's/addSbtPlugin\("com.giltgroupe"[[:space:]]+%[[:space:]]+"gilt-sbt-build"[[:space:]]+%[[:space:]]+"[[:digit:]]+.[[:digit:]]+.[[:digit:]]+"\)/addSbtPlugin("com.giltgroupe" % "gilt-sbt-build" % "'"$VERSION"'")/g' project/build.sbt 
-  git commit -a -m "NOJIRA-0: Upgrade gilt-sbt-build tp $VERSION"
+  git commit -m "NOJIRA-0: Upgrade gilt-sbt-build to $VERSION" project/build.sbt
   git push origin HEAD:refs/for/master
 done < projects.txt

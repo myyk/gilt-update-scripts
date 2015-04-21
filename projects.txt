@@ -1,3 +1,17 @@
+admin-invoice-detail
+admin-region
+admin-shipping-calculator
+commons-5-to-6-conversion
+lib-alipay
+lib-masterpass
+lib-vertexinc-taxlookup
+order_service
+payment_service
+payment_service-client
+svc-alipay
+svc-invoice-detail
+svc-metrics-by-query
 svc-payment-manager
 svc-region
 svc-shipping-calculator
+web-checkout-legacy
