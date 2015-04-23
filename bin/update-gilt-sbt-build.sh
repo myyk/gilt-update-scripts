@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="6.5.2"
+VERSION="6.6.0"
 
 while read -r LINE || [[ -n $LINE ]]; do
   printf "%s\n" "${LINE}"
